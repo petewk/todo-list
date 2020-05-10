@@ -15,7 +15,7 @@ export default class ToDoInput extends Component {
             </div>
             <input type="text" className="form-control text-capitalize" placeholder="enter item to add to list" value={item} id='inputform' onChange={handleChange}/>
           </div>
-          <button type="submit" className={editItem ? "btn btn-block btn-success mt-3" : "btn btn-block btn-primary mt-3 text-uppercase"} onClick={handleSubmit}>{editItem ? 'Edit Item' : 'Add Item'}</button>
+          <button type="submit" disabled={item?false:true} className={editItem ? "btn btn-block btn-success mt-3" : "btn btn-block btn-primary mt-3 text-uppercase"} onClick={handleSubmit} >{editItem ? 'Edit Item' : 'Add Item'}</button>
         </form>
       </div>
 )
